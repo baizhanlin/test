@@ -13,5 +13,12 @@ $ git status
 $ git diff readme.txt 
 $ git add readme.txt
 $ git commit -m "add distributed"
+//修改日志 及版本回退
+$ git log --pretty=oneline
+git reset --hard HEAD^
+git reset --hard 4550e9e1e18d98
+git reflog   //查看历史提交的版本号 以方便回退t 
+//工作区和版本库最新版本的区别
+diff HEAD -- readme.txt
 
 
