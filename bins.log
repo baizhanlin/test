@@ -39,8 +39,23 @@ git branch dev //创建分支
 git checkout dev //切换分支
 git branch //显示所有分支
 git merge dev //合并分支
-git branch -d dev //删除分:支
-
+git branch -d dev //删除分支:
+gitt log --graph --pretty=oneline --abbrev-commit //查看分支的合并情况
+git merge --no-ff -m "merge with no-ff" dev //merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息
+git stash //把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+git stash list// 查看工作现场
+git stash apply stash@{0} //恢复到指定工作现场
+git stash drop stash@{0} //删除指定工作现场
+git stash pop //恢复并删除工作现场
+git cherry-pick 4c805e2//复制特定提交到当前分支
+git branch -D <name>//强行删除分支
+//多人协助
+git remote -v //查看远程库的信息
+git checkout -b branch-name origin/branch-name  //在本地创建和远程分支对应的分支 名字最好保持一致
+git push origin <branch-name> //推送自己的修改
+git pull//如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并
+git push origin <branch-name> //没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+git branch --set-upstream-to <branch-name> origin/<branch-name> //git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令
 
 
 
