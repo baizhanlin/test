@@ -32,6 +32,7 @@ ssh-keygen -t rsa -C "youremail@example.com"   //生成ssh的公钥和私钥
 git remote add origin https://github.com/baizhanlin/test.git //关联远程仓库
 git push -u origin master //第一次推送master分支的所有内容
 git push origin master //以后每次提交后推送最新的修改
+git clone https://github.com/baizhanlin/test.git //从远程库拉区资源
 
 
 
